@@ -1,4 +1,3 @@
-package goprojects
 package main
 
 import (
@@ -7,7 +6,7 @@ import (
 	"time"
 )
 
-func checkPort(host string, port string) bool {
+func checkPort1(host string, port string) bool {
 
 	address := net.JoinHostPort(host, port)
 
@@ -31,7 +30,7 @@ func main() {
 	host := "google.com"
 	port := "443"
 
-	if checkPort(host, port) {
+	if checkPort1(host, port) {
 		fmt.Printf("%s:%s is OPEN\n", host, port)
 	} else {
 		fmt.Printf("%s:%s is CLOSED\n", host, port)
